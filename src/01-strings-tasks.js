@@ -202,8 +202,28 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(/* width, height */) {
-  throw new Error('Not implemented');
+function getRectangleString(width, height) {
+  const topElems = ['┌', '┐'];
+  const bottomElems = ['└', '┘'];
+  const horizontalDivider = '─';
+  const sideElems = ['│', '│'];
+
+  const makeLine = (arr, divider, repeatTime) => `${arr.join(divider.repeat(repeatTime))}\n`;
+
+  const repeatTime = width - 2;
+  let line = '';
+
+  for (let i = 0; i < height; i += 1) {
+    if (i === 0) {
+      line += makeLine(topElems, horizontalDivider, repeatTime);
+    } else if (i === height - 1) {
+      line += makeLine(bottomElems, horizontalDivider, repeatTime);
+    } else {
+      line += makeLine(sideElems, ' ', repeatTime);
+    }
+  }
+
+  return line;
 }
 
 
@@ -223,8 +243,26 @@ function getRectangleString(/* width, height */) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const AChar = 65;
+  const ZChar = 90;
+  const aChar = 97;
+  const zChar = 122;
+
+  const encodedStr = str.split('').map((el) => {
+    let charNum = el.charCodeAt(0);
+
+    if (charNum >= AChar && charNum <= ZChar) {
+      charNum = charNum + 13 <= ZChar ? charNum + 13 : (charNum + 12 + AChar) % ZChar;
+    } else if (charNum >= aChar && charNum <= zChar) {
+      charNum = charNum + 13 <= zChar ? charNum + 13 : (charNum + 12 + aChar) % zChar;
+    } else {
+      return el;
+    }
+    return String.fromCharCode(charNum);
+  }).join('');
+
+  return encodedStr;
 }
 
 /**
