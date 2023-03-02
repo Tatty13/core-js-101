@@ -1,20 +1,29 @@
 # Core JS 101
 
-:warning: **Please note that you mustn't open PRs that contains the answers to this repo!**
+:warning: **Please note that you mustn't open PRs that contains the answers to [this repo](https://github.com/mikhama/core-js-101)!**
 
 However, PRs with the fixes or proposals are welcomed!
+
+---
+
+## Stack
+* JavaScript (ES6)
+* Webpack
+* Git
+
+---
 
 ## Task
 The task is to implement functions on different Core JS topics. There are eight modules with different tasks. Each module consists of tasks for specified topic:
 
-1. Strings
-2. Numbers
-3. Arrays
-4. Date
-5. Objects
-6. Promises
-7. Conditions and Loops
-8. Functions and Closures
+1. [Strings](https://github.com/Tatty13/core-js-101/blob/master/src/01-strings-tasks.js)
+2. [Numbers](https://github.com/Tatty13/core-js-101/blob/master/src/02-numbers-tasks.js)
+3. [Arrays](https://github.com/Tatty13/core-js-101/blob/master/src/03-arrays-tasks.js)
+4. [Date](https://github.com/Tatty13/core-js-101/blob/master/src/04-date-tasks.js)
+5. [Objects](https://github.com/Tatty13/core-js-101/blob/master/src/05-objects-tasks.js)
+6. [Promises](https://github.com/Tatty13/core-js-101/blob/master/src/06-promises-tasks.js)
+7. [Conditions and Loops](https://github.com/Tatty13/core-js-101/blob/master/src/07-conditions-n-loops-tasks.js)
+8. [Functions and Closures](https://github.com/Tatty13/core-js-101/blob/master/src/08-functions-n-closures-tasks.js)
 
 **Active usage of [documentation](https://developer.mozilla.org/en-US/) is strongly recommended!**
 
@@ -52,12 +61,6 @@ The task is to implement functions on different Core JS topics. There are eight 
     Implement the function by any way and verify your solution by running tests until the failed test become passed (green).
 8. Run `npm test` in command line. If everything is OK you can try to resolve the next task.
 9. You will see the number of passing and pending tests: `101` of passing tests is equal to `100` in score.
-
-## Submit to [rs app](https://app.rs.school/)
-1. Open [rs app](https://app.rs.school/) and login
-2. Go to [submit task page](https://app.rs.school/course/submit-task?course=rs-2019-q3)
-3. Select your task (Core JS 101)
-4. Press submit button and enjoy
 
 ## Notes
 * We recommend you to use nodejs of version 14 or lower. If you using any of features that does not supported by node `v14`, score won't be submitted.
